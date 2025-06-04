@@ -2,14 +2,19 @@
 
 # Aquarium Project
 
-A web-based aquarium management system built with Laravel.
+A web-based multilingual aquarium management system built with Laravel.
 
 ## Description
 
-This project is a digital aquarium management system that helps track water parameters, maintenance schedules, and fish inventory.
+This project is a digital aquarium management system that helps track water parameters, maintenance schedules, and fish inventory. Available in multiple languages.
 
 ## Features
 
+- Multilanguage support:
+  - English (en)
+  - Dutch (nl)
+  - French (fr)
+  - German (de)
 - Water parameter tracking (pH, temperature, nitrates, etc.)
 - Fish inventory management
 - Maintenance schedule and reminders
@@ -35,6 +40,8 @@ npm install
 4. Configure environment variables:
 - Copy `.env.example` to `.env`
 - Update the database and other configuration values
+- Set your default locale in .env: `APP_LOCALE=en`
+- Set available locales in .env: `APP_LOCALES=en,nl,fr,de`
 - Generate application key:
 ```bash
 php artisan key:generate
