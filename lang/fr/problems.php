@@ -27,10 +27,10 @@ return [
         ],
     ],
     'types' => [
-        'illness' => 'Maladie',
-        'algae' => 'Algues',
-        'equipment' => 'Équipement',
-        'other' => 'Autre',
+        'ziekte' => 'Maladie',
+        'algen' => 'Algues',
+        'apparatuur' => 'Équipement',
+        'overig' => 'Autre',
     ],
     'status' => [
         'active' => 'Actif',

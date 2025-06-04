@@ -14,10 +14,10 @@ return [
         'action' => 'Aktion',
     ],
     'types' => [
-        'illness' => 'Krankheit',
-        'algae' => 'Algen',
-        'equipment' => 'Ausrüstung',
-        'other' => 'Sonstiges',
+        'ziekte' => 'Krankheit',
+        'algen' => 'Algen',
+        'apparatuur' => 'Ausrüstung',
+        'overig' => 'Sonstiges',
     ],
     'status' => [
         'active' => 'Aktiv',

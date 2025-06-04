@@ -35,17 +35,17 @@
                     <select name="type" id="type" required
                             class="w-full rounded-md border-gray-300 focus:border-blue-500 focus:ring-0">
                         <option value="">{{ __('problems.create.fields.type.placeholder') }}</option>
-                        <option value="illness" {{ old('type') === 'illness' ? 'selected' : '' }}>
-                            {{ __('problems.types.illness') }}
+                        <option value="ziekte" {{ old('type') === 'ziekte' ? 'selected' : '' }}>
+                            {{ __('problems.types.ziekte') }}
                         </option>
-                        <option value="algae" {{ old('type') === 'algae' ? 'selected' : '' }}>
-                            {{ __('problems.types.algae') }}
+                        <option value="algen" {{ old('type') === 'algen' ? 'selected' : '' }}>
+                            {{ __('problems.types.algen') }}
                         </option>
-                        <option value="equipment" {{ old('type') === 'equipment' ? 'selected' : '' }}>
-                            {{ __('problems.types.equipment') }}
+                        <option value="apparatuur" {{ old('type') === 'apparatuur' ? 'selected' : '' }}>
+                            {{ __('problems.types.apparatuur') }}
                         </option>
-                        <option value="other" {{ old('type') === 'other' ? 'selected' : '' }}>
-                            {{ __('problems.types.other') }}
+                        <option value="overig" {{ old('type') === 'overig' ? 'selected' : '' }}>
+                            {{ __('problems.types.overig') }}
                         </option>
                     </select>
                 </div>
