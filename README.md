@@ -47,7 +47,7 @@ npm start
 
 - Frontend: HTML, CSS, JavaScript
 - Backend: Node.js, Express
-- Database: MongoDB
+- Database: mysql, sqlite
 - Other: Chart.js for data visualization
 
 ## Contributing
