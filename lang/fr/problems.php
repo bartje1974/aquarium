@@ -1,0 +1,52 @@
+<?php
+
+return [
+    'list' => [
+        'title' => 'Problèmes',
+        'empty' => 'Aucun problème enregistré.',
+        'add' => 'Ajouter un problème',
+    ],
+    'table' => [
+        'type' => 'Type',
+        'problem' => 'Problème',
+        'start_date' => 'Date de début',
+        'status' => 'Statut',
+        'action' => 'Action',
+    ],
+    'create' => [
+        'title' => 'Nouveau problème',
+        'submit' => 'Ajouter un problème',
+        'fields' => [
+            'type' => [
+                'label' => 'Type de problème',
+                'placeholder' => 'Sélectionnez le type...',
+            ],
+            'title' => 'Titre',
+            'description' => 'Description',
+            'started_on' => 'Date de début',
+        ],
+    ],
+    'types' => [
+        'illness' => 'Maladie',
+        'algae' => 'Algues',
+        'equipment' => 'Équipement',
+        'other' => 'Autre',
+    ],
+    'status' => [
+        'active' => 'Actif',
+        'resolved' => 'Résolu',
+    ],
+    'actions' => [
+        'resolve' => 'Résoudre',
+    ],
+    'modal' => [
+        'title' => 'Résoudre le problème',
+        'solution' => 'Solution',
+        'resolved_date' => 'Date de résolution',
+        'cancel' => 'Annuler',
+        'save' => 'Enregistrer',
+    ],
+    'messages' => [
+        'resolved' => 'Le problème a été marqué comme résolu.',
+    ],
+];
