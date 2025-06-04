@@ -16,9 +16,10 @@ This project is a digital aquarium management system that helps track water para
   - French (fr)
   - German (de)
 - Water parameter tracking (pH, temperature, nitrates, etc.)
-- Fish inventory management
 - Maintenance schedule and reminders
 - Visual representation of tank status
+
+All water values ​​for both fresh and salt water and language and water changes can be done in the settings.
 
 ## Installation
 
@@ -60,6 +61,28 @@ php artisan serve
 7. Compile assets:
 ```bash
 npm run dev
+```
+
+## Troubleshooting
+
+### Pending Changes Hang
+
+If you encounter issues with pending changes hanging:
+
+1. Clear NPM cache:
+```bash
+npm cache clean --force
+```
+
+2. Delete node_modules and reinstall:
+```bash
+rm -rf node_modules
+npm install
+```
+
+3. Rebuild assets:
+```bash
+npm run build
 ```
 
 ## Technologies Used
