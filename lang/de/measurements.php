@@ -103,4 +103,8 @@ return [
         'too_low' => ':parameter ist zu niedrig (:value). Sollte mindestens :threshold sein.',
         'too_high' => ':parameter ist zu hoch (:value). Sollte höchstens :threshold sein.',
     ],
+    'messages' => [
+        'created_add_another' => 'Messung hinzugefügt. Sie können jetzt eine weitere Messung hinzufügen.',
+        'updated' => 'Messung erfolgreich aktualisiert.',
+    ],
 ];

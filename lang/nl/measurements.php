@@ -103,4 +103,8 @@ return [
         'too_low' => ':parameter is te laag (:value). Moet minimaal :threshold zijn.',
         'too_high' => ':parameter is te hoog (:value). Moet maximaal :threshold zijn.',
     ],
+    'messages' => [
+        'created_add_another' => 'Meting toegevoegd. U kunt nu een nieuwe meting toevoegen.',
+        'updated' => 'Meting succesvol bijgewerkt.',
+    ],
 ];

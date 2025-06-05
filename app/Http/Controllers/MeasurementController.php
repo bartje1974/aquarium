@@ -48,7 +48,7 @@ class MeasurementController extends Controller
 
         return redirect()
             ->route('aquariums.measurements.create', $aquarium)
-            ->with('success', 'Meting toegevoegd. U kunt nu een nieuwe meting toevoegen.');
+            ->with('success', __('measurements.messages.created_add_another'));
     }
 
     public function edit($aquariumId, Measurement $measurement)
@@ -80,7 +80,7 @@ class MeasurementController extends Controller
 
         return redirect()
             ->route('aquariums.measurements.index', $aquarium)
-            ->with('success', 'Meting succesvol bijgewerkt');
+            ->with('success', __('measurements.messages.updated'));
     }
 
     public function show($aquariumId, Measurement $measurement)
