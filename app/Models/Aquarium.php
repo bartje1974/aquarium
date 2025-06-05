@@ -35,13 +35,35 @@ class Aquarium extends Model
         return $this->problems()->whereNull('resolved_on');
     }
 
+    /**
+     * Get water parameter thresholds for this aquarium
+     * @return array
+     */
     public function getThresholds(): array
     {
-        $defaultThresholds = config('water_thresholds.' . $this->type, []);
-                
-        $customThresholds = $this->custom_thresholds ?? [];
+        // Get default thresholds from config based on water type
+        $waterType = $this->water_type ?: 'zoetwater'; // Default to freshwater if not set
+        $defaultThresholds = config('water_thresholds.' . $waterType);
         
-        return array_merge($defaultThresholds, $customThresholds);
+        // Initialize thresholds with defaults
+        $thresholds = $defaultThresholds;
+        
+        // Override with custom values from settings if they exist
+        if ($this->settings) {
+            foreach ($thresholds as $param => $values) {
+                if (property_exists($this->settings, "{$param}_min") && 
+                    $this->settings->{"{$param}_min"} !== null) {
+                    $thresholds[$param]['min'] = $this->settings->{"{$param}_min"};
+                }
+                
+                if (property_exists($this->settings, "{$param}_max") && 
+                    $this->settings->{"{$param}_max"} !== null) {
+                    $thresholds[$param]['max'] = $this->settings->{"{$param}_max"};
+                }
+            }
+        }
+        
+        return $thresholds;
     }
 
     public function needsWaterRefresh(): bool
