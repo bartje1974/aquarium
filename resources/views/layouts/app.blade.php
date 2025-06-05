@@ -16,12 +16,12 @@
                 <div class="flex items-center">
                     <div class="flex space-x-8">
                         <a href="{{ route('aquariums.index') }}" 
-                           class="@if(request()->routeIs('aquariums.*')) border-blue-500 text-gray-900 @else border-transparent text-gray-500 @endif">
+                           class="inline-flex items-center px-1 pt-1 border-b-2 @if(request()->routeIs('aquariums.*')) border-blue-500 text-gray-900 @else border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 @endif transition duration-150 ease-in-out">
                             {{ __('aquarium.list.title') }}
                         </a>
                         
                         <a href="{{ route('settings.index') }}"
-                           class="@if(request()->routeIs('settings.*')) border-blue-500 text-gray-900 @else border-transparent text-gray-500 @endif">
+                           class="inline-flex items-center px-1 pt-1 border-b-2 @if(request()->routeIs('settings.*')) border-blue-500 text-gray-900 @else border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 @endif transition duration-150 ease-in-out">
                             {{ __('settings.title') }}
                         </a>
                     </div>
