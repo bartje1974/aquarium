@@ -18,6 +18,8 @@ Route::prefix('aquariums/{aquarium}')->group(function () {
     Route::get('measurements/create', [MeasurementController::class, 'create'])->name('aquariums.measurements.create');
     Route::post('measurements', [MeasurementController::class, 'store'])->name('aquariums.measurements.store');
     Route::get('measurements/{measurement}', [MeasurementController::class, 'show'])->name('aquariums.measurements.show');
+    Route::get('measurements/{measurement}/edit', [MeasurementController::class, 'edit'])->name('aquariums.measurements.edit');
+    Route::put('measurements/{measurement}', [MeasurementController::class, 'update'])->name('aquariums.measurements.update');
 });
 
 // Nested problem routes

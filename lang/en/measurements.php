@@ -93,13 +93,14 @@ return [
     'parameters' => [
         'temperature' => 'Temperature (°C)',
         'ph' => 'pH',
-        'kh' => 'KH (°dH)',
-        'gh' => 'GH (°dH)',
+        'kh' => 'KH',
+        'gh' => 'GH',
         'nh4' => 'NH₄',
         'no2' => 'NO₂',
         'no3' => 'NO₃',
-        'po4' => 'PO₄',
-        'o2' => 'O₂',
-        'co2' => 'CO₂',
+    ],
+    'suggestions' => [
+        'too_low' => ':parameter is too low (:value). Should be at least :threshold.',
+        'too_high' => ':parameter is too high (:value). Should be at most :threshold.',
     ],
 ];

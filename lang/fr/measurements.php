@@ -3,8 +3,8 @@
 return [
     'list' => [
         'title' => 'Mesures',
-        'empty' => 'Aucune mesure disponible.',
-        'empty_cta' => 'Ajoutez votre première mesure !',
+        'empty' => 'Aucune mesure enregistrée.',
+        'empty_cta' => 'Ajouter la première mesure !',
         'add' => 'Ajouter une mesure',
     ],
     'table' => [
@@ -16,15 +16,15 @@ return [
         'nh4' => 'NH₄',
         'no2' => 'NO₂',
         'no3' => 'NO₃',
-        'water_refresh' => 'Changement d\'eau',
+        'water_refresh' => 'Renouvellement d\'eau',
         'edit' => 'Modifier',
     ],
     'graphs' => [
-        'ph_values' => 'Valeurs de pH',
+        'ph_values' => 'Valeurs pH',
         'temperature_values' => 'Température (°C)',
     ],
     'create' => [
-        'title' => 'Nouvelle Mesure',
+        'title' => 'Nouvelle mesure',
         'submit' => 'Ajouter la mesure',
         'fields' => [
             'date' => 'Date',
@@ -38,11 +38,11 @@ return [
             'po4' => 'PO₄',
             'o2' => 'O₂',
             'co2' => 'CO₂',
-            'water_refresh' => 'Eau changée (litres)',
+            'water_refresh' => 'Eau renouvelée (Litres)',
             'water_refresh_placeholder' => 'Optionnel',
         ],
         'validation' => [
-            'required' => 'Champ requis',
+            'required' => 'Champ obligatoire',
             'range' => '(:min - :max)',
         ],
     ],
@@ -61,11 +61,11 @@ return [
             'po4' => 'PO₄',
             'o2' => 'O₂',
             'co2' => 'CO₂',
-            'water_refresh' => 'Eau changée (litres)',
+            'water_refresh' => 'Eau renouvelée (Litres)',
             'water_refresh_placeholder' => 'Optionnel',
         ],
         'validation' => [
-            'required' => 'Champ requis',
+            'required' => 'Champ obligatoire',
             'range' => '(:min - :max)',
         ],
     ],
@@ -84,7 +84,7 @@ return [
             'o2' => 'O₂',
             'co2' => 'CO₂',
         ],
-        'water_refresh' => 'Changement d\'eau',
+        'water_refresh' => 'Eau renouvelée',
         'suggestions' => [
             'title' => 'Suggestions',
             'no_suggestions' => 'Aucune suggestion disponible',
@@ -93,13 +93,14 @@ return [
     'parameters' => [
         'temperature' => 'Température (°C)',
         'ph' => 'pH',
-        'kh' => 'KH (°dH)',
-        'gh' => 'GH (°dH)',
+        'kh' => 'KH',
+        'gh' => 'GH',
         'nh4' => 'NH₄',
         'no2' => 'NO₂',
         'no3' => 'NO₃',
-        'po4' => 'PO₄',
-        'o2' => 'O₂',
-        'co2' => 'CO₂',
+    ],
+    'suggestions' => [
+        'too_low' => ':parameter est trop bas (:value). Devrait être au moins :threshold.',
+        'too_high' => ':parameter est trop élevé (:value). Devrait être au maximum :threshold.',
     ],
 ];

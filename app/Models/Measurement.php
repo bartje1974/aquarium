@@ -27,13 +27,13 @@ class Measurement extends Model {
         $thresholds = $this->aquarium->getThresholds();
 
         $parameters = [
-            'temperature' => 'Temperature',
-            'ph' => 'pH',
-            'kh' => 'KH',
-            'gh' => 'GH',
-            'nh4' => 'NH₄',
-            'no2' => 'NO₂',
-            'no3' => 'NO₃'
+            'temperature' => __('measurements.parameters.temperature'),
+            'ph' => __('measurements.parameters.ph'),
+            'kh' => __('measurements.parameters.kh'),
+            'gh' => __('measurements.parameters.gh'),
+            'nh4' => __('measurements.parameters.nh4'),
+            'no2' => __('measurements.parameters.no2'),
+            'no3' => __('measurements.parameters.no3')
         ];
 
         foreach ($parameters as $param => $label) {
@@ -41,13 +41,21 @@ class Measurement extends Model {
                 if (isset($thresholds[$param]['min']) && $this->$param < $thresholds[$param]['min']) {
                     $suggestions[] = [
                         'type' => 'warning',
-                        'message' => "{$label} is te laag ({$this->$param}). Moet minimaal {$thresholds[$param]['min']} zijn."
+                        'message' => __('measurements.suggestions.too_low', [
+                            'parameter' => $label,
+                            'value' => $this->$param,
+                            'threshold' => $thresholds[$param]['min']
+                        ])
                     ];
                 }
                 if (isset($thresholds[$param]['max']) && $this->$param > $thresholds[$param]['max']) {
                     $suggestions[] = [
                         'type' => 'danger',
-                        'message' => "{$label} is te hoog ({$this->$param}). Moet maximaal {$thresholds[$param]['max']} zijn."
+                        'message' => __('measurements.suggestions.too_high', [
+                            'parameter' => $label,
+                            'value' => $this->$param,
+                            'threshold' => $thresholds[$param]['max']
+                        ])
                     ];
                 }
             }
