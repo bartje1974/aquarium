@@ -23,6 +23,12 @@
                 </div>
 
                 <div class="p-6">
+                    @if(session('success'))
+                        <div class="mb-4 p-4 bg-green-50 border border-green-200 text-green-700 rounded">
+                            {{ session('success') }}
+                        </div>
+                    @endif
+
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         @foreach($aquariums as $aquarium)
                             <div class="bg-white border rounded-lg shadow-sm h-full flex flex-col">

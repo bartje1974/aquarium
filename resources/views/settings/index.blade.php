@@ -9,7 +9,7 @@
     <div class="p-6">
         @if(session('success'))
             <div class="mb-4 p-4 bg-green-50 border border-green-200 text-green-700 rounded">
-                {{ __('settings.success') }}
+                {{ session('success') }}
             </div>
         @endif
 
