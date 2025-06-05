@@ -59,16 +59,24 @@
             </div>
         </div>
 
-        @if($measurement->suggestions())
+        @php
+            $suggestions = $measurement->suggestions();
+        @endphp
+
+        @if(count($suggestions) > 0)
             <div class="mt-4 p-4 bg-white border border-gray-300 rounded shadow">
-                <h3 class="font-semibold text-gray-800 mb-2">{{ __('measurements.show.suggestions.title') }}:</h3>
+                <h3 class="font-semibold text-gray-800 mb-2">{{ __('measurements.show.suggestions.title') }}</h3>
                 <ul class="space-y-2">
-                    @foreach ($measurement->suggestions() as $tip)
+                    @foreach($suggestions as $tip)
                         <li class="text-sm {{ $tip['type'] === 'danger' ? 'text-red-700' : 'text-yellow-700' }}">
                             {{ $tip['message'] }}
                         </li>
                     @endforeach
                 </ul>
+            </div>
+        @else
+            <div class="mt-4 p-4 bg-gray-50 border border-gray-200 rounded">
+                <p class="text-gray-500 text-sm">{{ __('measurements.show.suggestions.no_suggestions') }}</p>
             </div>
         @endif
     </div>
