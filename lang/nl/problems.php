@@ -47,6 +47,9 @@ return [
         'save' => 'Opslaan',
     ],
     'messages' => [
-        'resolved' => 'Probleem is als opgelost gemarkeerd.',
+        'created' => 'Probleem succesvol geregistreerd.',
+        'updated' => 'Probleem succesvol bijgewerkt.',
+        'resolved' => 'Probleem gemarkeerd als opgelost.',
+        'deleted' => 'Probleem succesvol verwijderd.',
     ],
 ];

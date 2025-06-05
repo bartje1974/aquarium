@@ -34,6 +34,9 @@ return [
         'save' => 'Speichern',
     ],
     'messages' => [
-        'resolved' => 'Problem wurde als gelöst markiert.',
+        'created' => 'Problem erfolgreich registriert.',
+        'updated' => 'Problem erfolgreich aktualisiert.',
+        'resolved' => 'Problem als gelöst markiert.',
+        'deleted' => 'Problem erfolgreich gelöscht.',
     ],
 ];

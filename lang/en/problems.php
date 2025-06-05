@@ -47,6 +47,9 @@ return [
         'save' => 'Save',
     ],
     'messages' => [
-        'resolved' => 'Problem has been marked as resolved.',
+        'created' => 'Problem successfully registered.',
+        'updated' => 'Problem successfully updated.',
+        'resolved' => 'Problem marked as resolved.',
+        'deleted' => 'Problem successfully deleted.',
     ],
 ];

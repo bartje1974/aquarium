@@ -47,6 +47,9 @@ return [
         'save' => 'Enregistrer',
     ],
     'messages' => [
-        'resolved' => 'Le problème a été marqué comme résolu.',
+        'created' => 'Problème enregistré avec succès.',
+        'updated' => 'Problème mis à jour avec succès.',
+        'resolved' => 'Problème marqué comme résolu.',
+        'deleted' => 'Problème supprimé avec succès.',
     ],
 ];

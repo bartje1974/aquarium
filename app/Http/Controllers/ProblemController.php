@@ -32,7 +32,7 @@ class ProblemController extends Controller
 
         return redirect()
             ->route('aquariums.problems.index', $aquarium)
-            ->with('success', 'Probleem succesvol geregistreerd.');
+            ->with('success', __('problems.messages.created'));
     }
 
     public function resolve(Request $request, Aquarium $aquarium, Problem $problem)
@@ -46,6 +46,6 @@ class ProblemController extends Controller
 
         return redirect()
             ->route('aquariums.problems.index', $aquarium)
-            ->with('success', 'Probleem opgelost!');
+            ->with('success', __('problems.messages.resolved'));
     }
 }
