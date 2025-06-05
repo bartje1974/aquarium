@@ -128,6 +128,17 @@
                 </div>
             @endforeach
 
+            <!-- About Section -->
+            <div class="mb-8 bg-gray-50 rounded-lg p-6">
+                <h3 class="text-lg font-medium text-gray-900 mb-4">{{ __('settings.about.title') }}</h3>
+                <div class="max-w-md">
+                    <p class="text-sm text-gray-600 mb-2">
+                        <strong>{{ __('settings.about.version') }}:</strong> {{ config('app.version', '1.0.0') }}
+                    </p>
+                    <!-- Other app info -->
+                </div>
+            </div>
+
             <div class="mt-6">
                 <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md">
                     {{ __('settings.save') }}

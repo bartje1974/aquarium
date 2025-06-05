@@ -22,4 +22,8 @@ return [
         'maximum' => 'Maximum',
         'target' => 'Streefwaarde',
     ],
+    'about' => [
+        'title' => 'Over',
+        'version' => 'Versie',
+    ],
 ];

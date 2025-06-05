@@ -23,4 +23,8 @@ return [
         'maximum' => 'Maximum',
         'target' => 'Zielwert',
     ],
+    'about' => [
+        'title' => 'Über',
+        'version' => 'Version',
+    ],
 ];

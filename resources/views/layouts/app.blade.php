@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="h-full">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ config('app.name', 'Aquarium Manager') }}</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="bg-gray-100">
+<body class="bg-gray-100 min-h-full flex flex-col">
     <nav class="bg-white border-b border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
@@ -30,11 +30,20 @@
         </div>
     </nav>
 
-    <main class="py-6">
+    <main class="py-6 flex-grow">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             @yield('content')
         </div>
     </main>
+
+    <footer class="bg-blue-600 py-2 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center text-xs text-white">
+                <div>{{ config('app.name') }} &copy; {{ date('Y') }}</div>
+                <div>v{{ config('app.version', '1.0.0') }}</div>
+            </div>
+        </div>
+    </footer>
 
     @vite('resources/js/app.js')
     @stack('scripts')
